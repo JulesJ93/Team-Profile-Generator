@@ -1,4 +1,15 @@
 class Employee {}
+
+
+const Employee = require('./Employee.test.js');
+
+
+
+
+
+
+
+
 const name= this.name
 const id= this.id
 const email = this.email
