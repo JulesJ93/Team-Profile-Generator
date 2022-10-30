@@ -1,6 +1,3 @@
-class Employee {}
-
-
 const Employee = require('./Employee.test.js');
 
 
