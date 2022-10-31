@@ -15,5 +15,10 @@
     "devDependencies": {
       "jest": "^29.2.2"
     }
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/JulesJ93/Team-Profile-Generator.git"
+    }
+    "homepage": "https://github.com/JulesJ93/Team-Profile-Generator"
   }
   

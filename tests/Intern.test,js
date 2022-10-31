@@ -1,4 +1,4 @@
-class Intern{}
+class intern{}
 const Employee = require('./Employee.test.js');
 
 class Intern extends Employee {
