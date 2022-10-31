@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/JulesJ93/Team-Profile-Generator/issues"
   },
-  "homepage": "https://github.com/JulesJ93/Team-Profile-Generator#readme"
+  "homepage": "https://github.com/JulesJ93/Team-Profile-Generator#readme",
+  "dependencies": {
+    "bootstrap": "^5.2.2"
+  }
 }

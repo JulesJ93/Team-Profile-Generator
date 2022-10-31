@@ -1,13 +1,41 @@
-.jumbotron {
-    border-radius: 0;
+* {
+    box-sizing: border-box;
 }
 
-.employee-card {
-    box-shadow: 5px 5px 5px rgb(231, 9, 9);
-    margin: 1rem;
-    border: none;
+:root {
+    --primary: lightslategray;
+    --secondary: white;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#navbar {
+    background-color: rgb(219, 57, 84);
+   
+    font-size: 50px;
+}
+
+.navbar-brand {
+    font-size: 50px;
+    color: var(--secondary);
+}
+
+
+.card-header {
+    background-color: var(--primary);
+    color: var(--secondary);
 }
 
 .card-body {
-    background-color: rgb(235, 17, 17);
+    background-color: var(--secondary);
+    color: var(--primary);
+}
+
+.container {
+    margin: 100px auto;
+    justify-content: space-evenly;
+    display: flex;
+    
 }
