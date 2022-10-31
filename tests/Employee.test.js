@@ -1,8 +1,8 @@
-const Employee = require('./Employee.test.js');
+const Employee = require('.lib\Employee.js');
 
 
 
-
+C:\Users\Owner\documents\Team-Profile-Generator\lib\Employee.js
 
 
 
