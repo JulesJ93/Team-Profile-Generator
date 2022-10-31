@@ -1,24 +1,26 @@
 {
-    "name": "team-profile-generator",
-    "version": "1.0.0",
-    "description": "Generating team profiles",
-    "main": "index.js",
-    "directories": {
-      "test": "test"
-    },
-    "scripts": {
-      "start": "node index.js",
-      "test": "jest"
-    },
-    "author": "",
-    "license": "ISC",
-    "devDependencies": {
-      "jest": "^29.2.2"
-    }
-    "repository": {
-      "type": "git",
-      "url": "git+https://github.com/JulesJ93/Team-Profile-Generator.git"
-    }
-    "homepage": "https://github.com/JulesJ93/Team-Profile-Generator"
-  }
-  
+  "name": "package.json",
+  "version": "1.0.0",
+  "description": "My Team Profile Generator",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "Go!"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JulesJ93/Team-Profile-Generator.git"
+  },
+  "keywords": [
+    "Team-Profile-Generator"
+  ],
+  "author": "Jules Joseph",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JulesJ93/Team-Profile-Generator/issues"
+  },
+  "homepage": "https://github.com/JulesJ93/Team-Profile-Generator#readme"
+}
