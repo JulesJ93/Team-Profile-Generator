@@ -9,8 +9,8 @@ inquirer
   .prompt([
     {
       type: 'input',
-      message: 'What is your user name?',
-      name: 'username',
+      name: 'name',
+      message: 'What is the Team manager name?',
     },
     {
       type: 'password',
