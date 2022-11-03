@@ -48,3 +48,16 @@ inquirer
       }
   }
 },
+{
+  type: 'input',
+  name: 'github',
+  message: "Please enter the employee's github username.",
+  when: (input) => input.role === "Engineer",
+  validate: nameInput => {
+      if (nameInput ) {
+          return true;
+      } else {
+          console.log ("Please enter the employee's github username!")
+      }
+  }
+},
