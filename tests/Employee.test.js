@@ -1,18 +1,19 @@
 const Employee = require('.lib\Employee.js')
 
 describe("create a new Employee", () => {
-    const myEmployee = new Employee("Jules", 123, "Jules@mymail.com");
+    const myEmployee = new Employee("Jules", 5209, "Jules@mymail.com");
 
 
-    test("isPalindrome", () => {
+    test("check for name", () => {
         it("should return true if a string is a palindrome", () => {
-          const str = "racecar";
-    
-          const result = new Algo().isPalindrome(str);
-    
-          expect(result).toEqual(true);
-        });
-  
+     expect(myemployee.getname()).toEqual(Jules);
+    });
+
+    test("check employee Id",() => {
+        expect(myemployee.getid)).toEqual(5209);
+    });
+
+    }
 describe("Child", () => {
   // Test for all use cases when initializing a new Child object
   describe("Initialization", () => {
