@@ -5,12 +5,11 @@ describe("create a new Employee", () => {
 
 
     test("check for name", () => {
-        it("should return true if a string is a palindrome", () => {
      expect(myemployee.getname()).toEqual(Jules);
     });
 
-    test("check employee Id",() => {
-        expect(myemployee.getid)).toEqual(5209);
+    test("check employee Id", () => {
+        expect(myemployee.getid()).toEqual(5209);
     });
 
     }
