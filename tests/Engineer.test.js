@@ -1,6 +1,6 @@
 const Engineer = require("../lib/Engineer");
 
-describe)"create a new engineer", () =>
+describe("create a new engineer", () =>
     const myEngineer = new Engineer("Jules", 5209,"Julesj93@gmail.com","Julesj93");
 
     test("check name",() => {
@@ -9,16 +9,17 @@ describe)"create a new engineer", () =>
 
     test("check Id", () => {
         expect(myEngineer.getId()).toEqual(5209);
-      });
+    });
         
       test("check engineers Email", () => {
         expect(myEngineer.getEmail()).toEqual("Jules93@gmail.com");
-  });
+    });
        
-  test("check GitHub", () => {
+    test("check GitHub", () => {
     expect(myEngineer.getGitHub()).toEqual("Julesj93");
-  });
+    });
 
-  test("check Role", () => {
+    test("check Role", () => {
     expect(myEngineer.getRole()).toEqual("Engineer");
-  });
+    });
+});
