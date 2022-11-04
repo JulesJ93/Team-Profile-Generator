@@ -1,7 +1,7 @@
 const Employee = require('..lib\Employee.js')
 
 describe("create a new Employee", () => {
-    const myEmployee = new Employee("Jules", 5209, "Jules@mymail.com");
+    const myEmployee = new Employee("Jules", 5209, "Julesj93@gmail.com");
 
 //checks for employee name
     test("check for name", () => {
@@ -13,7 +13,7 @@ describe("create a new Employee", () => {
     });
 //checks for employee email
     test("check employee Email", () => {
-        expect(myEmployee.getEmail()).toEqual("Jules@mymail.com");
+        expect(myEmployee.getEmail()).toEqual("Julesj93@gmail.com");
       });
 //checks for employee role from getrole function      
     test("check Role", () => {
