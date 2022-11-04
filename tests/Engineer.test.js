@@ -6,9 +6,9 @@ describe)"create a new engineer", () =>
     test("check name",() => {
         expect(myEngineer.name).toEqual("Jules");
     });
-    test("check name",() => {
-        expect(myEngineer.name).toEqual("Jules");
-    });test("check name",() => {
+    test("check Id", () => {
+        expect(myEngineer.getId()).toEqual(5209);
+      });
         expect(myEngineer.name).toEqual("Jules");
     });test("check name",() => {
         expect(myEngineer.name).toEqual("Jules");
