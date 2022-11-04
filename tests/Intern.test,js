@@ -1,8 +1,0 @@
-class intern{}
-const Employee = require('./Employee.test.js');
-
-class Intern extends Employee {
-
-    const school=this.school
-    const getSchool()= this.getSchool
-    const getRole()=this.return.intern
