@@ -1,7 +1,7 @@
 const Engineer = require("../lib/Engineer");
 
 describe)"create a new engineer", () =>
-    const myEngineer = new Engineer("Jules", 5209,"Jules@mymail.com","Julesj93");
+    const myEngineer = new Engineer("Jules", 5209,"Julesj93@gmail.com","Julesj93");
 
     test("check name",() => {
         expect(myEngineer.name).toEqual("Jules");
@@ -12,10 +12,13 @@ describe)"create a new engineer", () =>
       });
         
       test("check engineers Email", () => {
-    expect(myEngineer.getEmail()).toEqual("Jules@mymail.com");
+        expect(myEngineer.getEmail()).toEqual("Jules93@gmail.com");
   });
        
-  expect(myEngineer.name).toEqual("Jules");
-    });test("check name",() => {
-        expect(myEngineer.name).toEqual("Jules");
-    });
+  test("check GitHub", () => {
+    expect(myEngineer.getGitHub()).toEqual("Julesj93");
+  });
+
+  test("check Role", () => {
+    expect(myEngineer.getRole()).toEqual("Engineer");
+  });
