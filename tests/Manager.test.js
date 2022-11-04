@@ -1,4 +1,5 @@
-class Manager {}
+const Manager = require ('..lib\Manager.js')
+
 const Employee = require('./Employee.test.js');
 
 class Manager extends Employee {
