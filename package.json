@@ -4,11 +4,10 @@
   "description": "My Team Profile Generator",
   "main": "index.js",
   "directories": {
-    "lib": "lib",
-    "test": "tests"
+    "lib": "lib"
   },
   "scripts": {
-    "test": "node index.js"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -27,5 +26,7 @@
     "bootstrap": "^5.2.2",
     "inquirer": "^8.2.5"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "jest": "^29.2.2"
+  }
 }

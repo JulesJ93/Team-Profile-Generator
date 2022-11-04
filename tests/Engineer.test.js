@@ -16,7 +16,7 @@ describe("create a new engineer", () => {
     });
 //checks for the engineers github       
     test("check GitHub", () => {
-    expect(myEngineer.getGitHub()).toEqual("Julesj93");
+    expect(myEngineer.getGithub()).toEqual("Julesj93");
     });
 //checks for the engineers role
     test("check Role", () => {

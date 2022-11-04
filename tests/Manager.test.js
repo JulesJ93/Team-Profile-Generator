@@ -1,4 +1,4 @@
-const Manager = require ('..lib\Manager.js')
+const Manager = require("../lib/Manager");
 
 describe("create a manager", () => {
     const myManager = new Manager("Jules", 5209, "Julesj93@gmail.com", 1);
