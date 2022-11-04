@@ -1,8 +1,18 @@
 const Employee = require('.lib\Employee.js')
 
+describe("create a new Employee", () => {
+    const myEmployee = new Employee("Jules", 123, "Jules@mymail.com");
 
-const Child = require("../child");
 
+    test("isPalindrome", () => {
+        it("should return true if a string is a palindrome", () => {
+          const str = "racecar";
+    
+          const result = new Algo().isPalindrome(str);
+    
+          expect(result).toEqual(true);
+        });
+  
 describe("Child", () => {
   // Test for all use cases when initializing a new Child object
   describe("Initialization", () => {
