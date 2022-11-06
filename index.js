@@ -6,6 +6,8 @@ const Intern = require("./lib/Intern");
 
 const generateHTML = require('./src/generateHTML');
 
+
+const addManager = () => {
 inquirer
   .prompt([
     {
