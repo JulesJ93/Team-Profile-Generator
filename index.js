@@ -6,22 +6,21 @@ const Intern = require("./lib/Intern");
 
 const generateHTML = require('./src/generateHTML');
 
-
-const addManager = () => {
-    return inquirer.prompt ([
-        {
-            type: 'input',
-            name: 'name',
-            message: 'Who is the manager of this team?', 
-            validate: nameInput => {
-                if (nameInput) {
-                    return true;
-                } else {
-                    console.log ("Please enter the manager's name!");
-                    return false; 
-                }
-            }
-        },
+inquirer
+  .prompt([
+    {
+      type: 'input',
+      name: 'name',
+      message: 'What is the Team manager name?',
+      validate: nameInput => {
+        if (nameInput) {
+            return true;
+        } else {
+            console.log ("Please enter the manager's name!");
+            return false; 
+        }
+    }
+},
 {
   type: 'input',
   name: 'id',
@@ -49,6 +48,19 @@ const addManager = () => {
       }
   }
 },
+{
+    type: 'input',
+    name: 'officeNumber',
+    message: "Please enter the manager's office number.",
+    validate: nameInput => {
+        if  (isNaN(nameInput)) {
+            console.log ("Please enter managers office number!")
+            return false; 
+        } else {
+            return true;
+        }
+    }
+  },
 ])
 
 
