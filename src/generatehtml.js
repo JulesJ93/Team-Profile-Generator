@@ -1,4 +1,4 @@
-// create card for manager
+// create card for manager to export once prompts are filled in
 const generateManager = function (manager) {
     return `
     <div class="col-4 mt-4">
