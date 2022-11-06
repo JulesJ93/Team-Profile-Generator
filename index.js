@@ -4,7 +4,8 @@ const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 
-
+// link to page creation
+const generateHTML = require('./src/generateHTML');
 
 inquirer
   .prompt([
@@ -51,5 +52,3 @@ inquirer
 ])
 
 
-
-    
