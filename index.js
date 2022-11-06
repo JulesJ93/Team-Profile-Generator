@@ -48,36 +48,8 @@ inquirer
       }
   }
 },
-{
-  type: 'input',
-  name: 'github',
-  message: "Please enter the employee's github username.",
-  when: (input) => input.role === "Engineer",
-  validate: nameInput => {
-      if (nameInput ) {
-          return true;
-      } else {
-          console.log ("Please enter the employee's github username!")
-      }
-  }
-},
-{
-  type: 'input',
-  name: 'school',
-  message: "Please enter the intern's school",
-  when: (input) => input.role === "Intern",
-  validate: nameInput => {
-      if (nameInput) {
-          return true;
-      } else {
-          console.log ("Please enter the intern's school!")
-      }
-  }
-},
-{
-  type: 'confirm',
-  name: 'confirmAddEmployee',
-  message: 'Would you like to add more team members?',
-  default: false
-}
 ])
+
+
+
+    
