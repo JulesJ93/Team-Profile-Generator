@@ -8,21 +8,20 @@ const generateHTML = require('./src/generateHTML');
 
 
 const addManager = () => {
-inquirer
-  .prompt([
-    {
-      type: 'input',
-      name: 'name',
-      message: 'What is the Team manager name?',
-      validate: nameInput => {
-        if (nameInput) {
-            return true;
-        } else {
-            console.log ("Please enter the manager's name!");
-            return false; 
-        }
-    }
-},
+    return inquirer.prompt ([
+        {
+            type: 'input',
+            name: 'name',
+            message: 'Who is the manager of this team?', 
+            validate: nameInput => {
+                if (nameInput) {
+                    return true;
+                } else {
+                    console.log ("Please enter the manager's name!");
+                    return false; 
+                }
+            }
+        },
 {
   type: 'input',
   name: 'id',
