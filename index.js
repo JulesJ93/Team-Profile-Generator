@@ -4,7 +4,6 @@ const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 
-// link to page creation
 const generateHTML = require('./src/generateHTML');
 
 inquirer
@@ -25,7 +24,7 @@ inquirer
 {
   type: 'input',
   name: 'id',
-  message: "Please enter the employee's ID.",
+  message: "Please enter the manager's ID.",
   validate: nameInput => {
       if  (isNaN(nameInput)) {
           console.log ("Please enter the employee's ID!")
@@ -38,7 +37,7 @@ inquirer
 {
   type: 'input',
   name: 'email',
-  message: "Please enter the employee's email.",
+  message: "Please enter the manager's email.",
   validate: email => {
       valid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)
       if (valid) {
