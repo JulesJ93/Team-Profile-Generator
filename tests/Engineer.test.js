@@ -12,7 +12,7 @@ describe("create a new engineer", () => {
     });
 //checks for the engineers email        
       test("check engineers Email", () => {
-        expect(myEngineer.getEmail()).toEqual("Jules93@gmail.com");
+        expect(myEngineer.getEmail()).toEqual("Julesj93@gmail.com");
     });
 //checks for the engineers github       
     test("check GitHub", () => {
