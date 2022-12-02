@@ -1,5 +1,6 @@
 const inquirer = require(`inquirer`)
 const fs = require(`fs`)
+const generateMarkdown = require('./generateMarkdown.js')
 
 //function that generates markdown file using answers from prompt
 const mdCreate = ({title, description, badge, installation, usage, license, contribute, tests, github, email}) =>
