@@ -1,66 +1,105 @@
-const inquirer = require('inquirer');
-const Employee = require("./lib/Employee");
-const Manager = require("./lib/Manager");
-const Engineer = require("./lib/Engineer");
-const Intern = require("./lib/Intern");
+const inquirer = require(`inquirer`)
+const fs = require(`fs`)
 
-const generateHTML = require("./src/generatehtml");
+//function that generates markdown file using answers from prompt
+const mdCreate = ({title, description, badge, installation, usage, license, contribute, tests, github, email}) =>
+`
+# ${title}
+## Description
+${description}
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [How to Contribute](#how-to-contribute)
+- [Tests](#tests)
+- [Questions](#questions)
+- [License](#license)
+## Badge
+![license](https://img.shields.io/badge/license-${license}-blue)
+## Installation
+${installation}
+## Usage
+To use this application, ${usage}
+## How to Contribute
+To contribute to this project, ${contribute}
+## Tests
+To test this application, ${tests}
+## Questions?
+Have questions?\n 
+Contact the author via [Email](mailto:${email})\n
+Or check out their [Github](https://github.com/${github})
+## License
+${license} - See license file for more information.
+`
 
-inquirer
-  .prompt([
+//create a command-line application that dynamically generates a professional README.md file from a user's input
+
+const startPrompt = () => {
+    return inquirer.prompt([
+    //create prompts for: 
+    //badge
     {
-      type: 'input',
-      name: 'name',
-      message: 'What is the Team manager name?',
-      validate: nameInput => {
-        if (nameInput) {
-            return true;
-        } else {
-            console.log ("Please enter the manager's name!");
-            return false; 
-        }
-    }
-},
-{
-  type: 'input',
-  name: 'id',
-  message: "Please enter the manager's ID.",
-  validate: nameInput => {
-      if  (isNaN(nameInput)) {
-          console.log ("Please enter the employee's ID!")
-          return false; 
-      } else {
-          return true;
-      }
-  }
-},
-{
-  type: 'input',
-  name: 'email',
-  message: "Please enter the manager's email.",
-  validate: email => {
-      valid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)
-      if (valid) {
-          return true;
-      } else {
-          console.log ('Please enter an email!')
-          return false; 
-      }
-  }
-},
-{
-    type: 'input',
-    name: 'officeNumber',
-    message: "Please enter the manager's office number.",
-    validate: nameInput => {
-        if  (isNaN(nameInput)) {
-            console.log ("Please enter managers office number!")
-            return false; 
-        } else {
-            return true;
-        }
-    }
-  },
-])
+        //Title, 
+        type: 'input',
+        name: 'title',
+        message: 'What is the title of your project?'
+    },
+    {
+        //Description, 
+        type: 'input',
+        name: 'description',
+        message: 'Describe your project.'
+    },
+    {
+        //Installation, 
+        type: 'input',
+        name: 'installation',
+        message: 'How do you install your application?'
+    },
+    {
+        //Usage, 
+        type: 'input',
+        name: 'usage',
+        message: 'Fill in the following information, "To use this application, {your input here}.'
+    },
+    {
+        //License
+        type: 'list',
+        message: 'What license do you want?',
+        name: 'license',
+        choices: ['MIT','Apache 2.0', 'ISC', 'BSD3'],
+    },
+    {
+        //Contributing, 
+        type: 'input',
+        name: 'contribute',
+        message: 'Fill in the following information, "To contribute to this project, {your input here}.'
+    },
+    {
+        //Tests 
+        type: 'input',
+        name: 'tests',
+        message: 'Fill in the following information, "To test this application, {your input here}.'
+    },
+    {
+        //Github
+        type: 'input',
+        name: 'github',
+        message: 'What is your Github username?'
+    },
+    {
+        //email
+        type: 'input',
+        name: 'email',
+        message: 'What is your email address?'
+    },
+]).then((answers)=>{
+    // console.log(answers)
+    const mdWrite = mdCreate(answers);
+    fs.writeFile(`./sample-readmes/README.md`, mdWrite, (err)=>{
+        err ? console.log(err) : console.log("Your file was created! Check your directory!")  
+    })
+})  }
 
-
+startPrompt();
+   
